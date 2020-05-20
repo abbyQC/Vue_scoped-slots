@@ -1,7 +1,9 @@
 <template>
   <div>
     <ul>
-      <li v-for="item in items" v-text="item" v-bind:key="item"></li>
+      <li v-for="item in items" v-bind:key="item">
+        <slot :item="item">{{item}}</slot>
+      </li>
     </ul>
   </div>
 </template>

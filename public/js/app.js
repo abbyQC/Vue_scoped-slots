@@ -1915,6 +1915,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["items"]
 });
@@ -19524,7 +19526,12 @@ var render = function() {
     _c(
       "ul",
       _vm._l(_vm.items, function(item) {
-        return _c("li", { key: item, domProps: { textContent: _vm._s(item) } })
+        return _c(
+          "li",
+          { key: item },
+          [_vm._t("default", [_vm._v(_vm._s(item))], { item: item })],
+          2
+        )
       }),
       0
     )

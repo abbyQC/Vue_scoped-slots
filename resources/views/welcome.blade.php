@@ -10,7 +10,17 @@
 
 <body>
     <div id="app">
-        <menu-list :items="['one','two','three']"></menu-list>
+        <!-- override with the default template in Example.vue-->
+        <menu-list :items="['one','two','three']">
+            <template scope="data">
+                <!--h2 v-text="data.item"></h2-->
+                <div>
+                    <em v-text="data.item"></em>
+                </div>
+            </template>
+
+        </menu-list>
+
 
     </div>
     <script src="/js/app.js"></script>
